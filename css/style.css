@@ -302,7 +302,7 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(/images/bg.avif);
+    background: url(/image/bg.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
