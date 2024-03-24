@@ -413,3 +413,83 @@ section {
 }
 
 
+
+
+
+
+/* S T A S T      M E D I A      L A  R G E  */
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+}
+
+/*  M E D I A              M I D E U M       S C R E E N ------- */
+@media (max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+        border-radius: 1rem 0 0 1rem;
+        opacity: 0;
+        transition: 1s;
+        z-index: 9;
+    }
+
+    .active {
+        right: 0 !important;
+        opacity: 1 !important;
+    }
+
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+    .home .content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* M E D I A      S M A L L     S C R E E N ------------ */
+
+@media (max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+
+}
