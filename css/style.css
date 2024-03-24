@@ -330,6 +330,7 @@ section {
 }
 
 /* E N D     H O M E     S E C T I O N  */
+/* S T A R T     A B O U T     S E C T I O N  */
 .heading{
     text-align: center;
     color: #fff;
@@ -369,6 +370,9 @@ section {
     padding: 1rem 0;
     line-height: 1.8;
 }
+/* E N D     A B O U T     S E C T I O N  */
+
+/* S T A R T     M E N U     S E C T I O N  */
 .menu .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -411,6 +415,7 @@ section {
         color: var(--black);
     } 
 }
+/* E N D     M E N U     S E C T I O N  */
 
 
 
