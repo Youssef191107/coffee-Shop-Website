@@ -311,9 +311,9 @@ section {
 .home .content {
     max-width: 60rem;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 7%;
+    /* transform: translate(-20%,-20%); */
   
 
 
