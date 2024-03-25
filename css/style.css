@@ -468,7 +468,50 @@ section {
 
 
 
+/* S T A R T      C O N T A C T      S E C T  I O N */
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 
+}
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit:cover ;
+}
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+
+}
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size:3.5rem;
+    color: #fff;
+}
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 ;
+    background: var(--border);
+    border: var(--border);
+}
+.contact .row form .inputBox span{
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: transparent;
+}
+/* E N D          C O N T A C T      S E C T  I O N */
 
 
 
