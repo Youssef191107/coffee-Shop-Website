@@ -70,3 +70,60 @@ imgIndex = (imgIndex + 1) % images.length
 },3000)
 // E N D      S E T I N T E V A L      F U N C T I O N   ------------
 
+// S T A R T    A  P I      L O G I C -----
+// JOOOOOOOOOOOOOOOOO
+// E  B  D      A  P I      L O G I C -----
+
+
+
+
+// S T A R T    C O N T A C T     S E C T I O N -------
+let iName = document.querySelector("#name");
+let iEmail = document.querySelector("#email");
+let iNum = document.querySelector("#number");
+let submit=document.querySelector("#submit")
+let dataList=[];
+if (window.localStorage.getItem("data") !==null) {
+    dataList=JSON.parse(window.localStorage.getItem("data"))
+    showData()
+}
+// create function
+submit.addEventListener("click" , (e)=>{
+    e.preventDefault()
+    let dataObj={
+        Name:iName.value,
+        Email:iEmail.value,
+        Number:iNum.value,
+    }
+    dataList.push(dataObj)
+    showData()
+    clearData()
+})
+// loop function
+function showData() {
+    let cartona = ``
+    for (let i = 0; i < dataList.length; i++) {
+        let dataEl = dataList[i]
+        cartona +=`
+        <tr>
+        <td>${dataEl.Name}</td>
+        <td>${dataEl.Email}</td>
+        <td>${dataEl.Number}</td>
+        </tr>
+        ` 
+    }
+    if (iName.value!="" || iEmail.value!="" || iNum.value!="") {
+        window.localStorage.setItem("data" , JSON.stringify(dataList))
+    }else{
+        window.alert("please copmplete your inputs" )
+    }
+}
+// clear functino
+function clearData() {
+    iName.value="";
+    iEmail.value="";
+    iNum.value="";
+}
+// confirm inputs value
+
+// S T A R T    C O N T A C T     S E C T I O N -------
