@@ -295,17 +295,17 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    /* background: url(/image/bg.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: screen; */
+    
 
 }
 .home img{
     width: 100% !important;
     height: 100%;
+    opacity: 0.5;
     object-fit: cover;
+    &:hover{
+        opacity: 1;
+    }
 }
 
 .home .content {
