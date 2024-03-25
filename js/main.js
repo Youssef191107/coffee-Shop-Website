@@ -68,6 +68,5 @@ let set=setInterval(()=>{
 img.src=images[imgIndex]
 imgIndex = (imgIndex + 1) % images.length
 },3000)
-set()
 // E N D      S E T I N T E V A L      F U N C T I O N   ------------
 
