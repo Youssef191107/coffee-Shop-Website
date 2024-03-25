@@ -62,7 +62,7 @@ window.addEventListener("resize", function (e) {
 // E N D          F U N C T I O N              R E S I Z E -------------
 // S E T I N T E R V A L              F U N C T I O N ------------
 let img=document.querySelector(".home img");
-let images=["image/bg2.jpg","image/bg3.jpg","image/bg4.jpg"];
+let images=["image/bg.avif","image/bg10.jpg","","image/bg4.jpg"];
 let imgIndex=0;
 let set=setInterval(()=>{
 img.src=images[imgIndex]
