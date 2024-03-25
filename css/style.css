@@ -301,7 +301,7 @@ section {
 .home img{
     width: 100% !important;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.4;
     object-fit: cover;
     &:hover{
         opacity: 1;
@@ -394,6 +394,9 @@ section {
     border: var(--border);
     &:hover  img{
         opacity: 1;
+    }
+    &:hover{
+        transform: translateY(-7px);
     }
 }
 .menu .box-container .box img{
