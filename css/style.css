@@ -252,15 +252,6 @@ section {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
 .scroll {
     width: 35px;
     height: 40px;
@@ -299,19 +290,31 @@ section {
 /* E N D     H E A D E R  ------------------------------- */
 /* S T A R T      H O M E     S E C T I O N  */
 .home {
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
-    background: url(/image/bg.avif);
+    position: relative;
+    /* background: url(/image/bg.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-blend-mode: screen;
+    background-blend-mode: screen; */
 
+}
+.home img{
+    width: 100% !important;
+    height: 100%;
+    object-fit: cover;
 }
 
 .home .content {
     max-width: 60rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
 
 }
 
