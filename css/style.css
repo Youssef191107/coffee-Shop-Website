@@ -79,7 +79,8 @@ section {
     height: 6rem;
     border-radius: 50%;
     overflow: hidden;
-    &:hover img{
+
+    &:hover img {
         opacity: 1;
     }
 
@@ -90,7 +91,7 @@ section {
     height: 6rem;
     cursor: pointer;
     opacity: 0.8;
-    
+
 }
 
 .header .navbar a {
@@ -98,7 +99,8 @@ section {
     font-size: 1.6rem;
     color: #fff;
     position: relative;
-    span{
+
+    span {
         width: 0%;
         height: .1rem;
         position: absolute;
@@ -106,7 +108,8 @@ section {
         bottom: -.5rem;
         background: var(--main-color);
     }
-    &:hover span{
+
+    &:hover span {
         width: 100%;
     }
 
@@ -114,9 +117,10 @@ section {
         width: 100%;
         color: var(--main-color);
     }
-    
+
 }
-.header .navbar a:first-child{
+
+.header .navbar a:first-child {
     color: var(--main-color) !important;
 }
 
@@ -295,15 +299,17 @@ section {
     display: flex;
     align-items: center;
     position: relative;
-    
+
 
 }
-.home img{
+
+.home img {
     width: 100% !important;
     height: 100%;
     opacity: 0.4;
     object-fit: cover;
-    &:hover{
+
+    &:hover {
         opacity: 1;
     }
 }
@@ -313,8 +319,7 @@ section {
     position: absolute;
     top: 30%;
     left: 7%;
-    /* transform: translate(-20%,-20%); */
-  
+
 
 
 }
@@ -335,108 +340,244 @@ section {
 
 /* E N D     H O M E     S E C T I O N  */
 /* S T A R T     A B O U T     S E C T I O N  */
-.heading{
+.heading {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
 }
-.heading span{
+
+.heading span {
     color: var(--main-color);
     text-transform: uppercase;
 
 }
-.about .row{
+
+.about .row {
     display: flex;
     align-items: center;
     background: var(--black);
     flex-wrap: wrap;
 }
-.about .row .image{
+
+.about .row .image {
     flex: 1 1 45rem;
 }
 
-.about .row .image img{
+.about .row .image img {
     width: 100%;
     opacity: 0.5;
-    &:hover{
+
+    &:hover {
         opacity: 1;
     }
 }
+
 .about .row .contant {
     flex: 1 1 45rem;
     padding: 2rem;
 }
-.about .row .contant h3{
+
+.about .row .contant h3 {
     font-size: 3rem;
     color: #fff;
 }
-.about .row .contant p{
+
+.about .row .contant p {
     font-size: 1.6rem;
     color: #ccc;
     padding: 1rem 0;
     line-height: 1.8;
 }
+
 /* E N D     A B O U T     S E C T I O N  */
 
 /* S T A R T     M E N U     S E C T I O N  */
-.menu .box-container{
+.menu .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
-   
+
 
 }
-.menu .box-container .box{
+
+.menu .box-container .box {
     padding: 5rem;
     text-align: center;
     border: var(--border);
-    &:hover  img{
+
+    &:hover img {
         opacity: 1;
     }
-    &:hover{
+
+    &:hover {
         transform: translateY(-7px);
     }
 }
-.menu .box-container .box img{
+
+.menu .box-container .box img {
     height: 10rem;
     opacity: 0.5;
 }
-.menu .box-container .box h3{
+
+.menu .box-container .box h3 {
     color: #fff;
     font-size: 2rem;
     padding: 1rem 0;
 }
-.menu .box-container .box .price{
+
+.menu .box-container .box .price {
     color: #fff;
     font-size: 2.5rem;
     padding: 0.5rem 0;
 }
-.menu .box-container .box .price span{
+
+.menu .box-container .box .price span {
     color: #fff;
     font-size: 1.5rem;
     padding: 0.5rem 0;
     text-decoration: line-through;
 }
-.menu .box-container .box:hover{
+
+.menu .box-container .box:hover {
     background-color: #fff;
-    &.box h3{
+
+    &.box h3 {
         color: var(--black);
     }
-    &.box .price{
+
+    &.box .price {
         color: var(--black);
-    } 
-    &.box .price span{
+    }
+
+    &.box .price span {
         color: var(--black);
-    } 
+    }
 }
+
 /* E N D     M E N U     S E C T I O N  */
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* S T A R T      B L O G S      S E C T I O N  */
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+}
+
+.blogs .box-container .box {
+    border: var(--border);
+
+}
+
+.blogs .box-container .box .image {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.blogs .box-container .box .image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    object-fit: cover;
+}
+
+.blogs .box-container .box:hover .image img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.blogs .box-container .box .content {
+    padding: 2rem;
+}
+
+.blogs .box-container .box .content .title {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+.blogs .box-container .box .content .title:hover{
+    color: var(--main-color);
+}
+.blogs .box-container .box .content span{
+    color: var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+.blogs .box-container .box .content p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 1rem 0;
+}
+/* E N D          B L O G S      S E C T I O N  */
+/* S T A R T      F O O T E R       S E C T I O N  */
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+.footer .shar{
+    padding:1rem 0 ;
+}
+.footer .shar a{
+    width: 3.5rem;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    color: #fff;
+    border:var(--border) ;
+    margin: .3rem;
+    border-radius: .5rem;
+}
+.footer .shar a:hover{
+    background-color: var(--main-color);
+    transform: translateY(-.5rem);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+
+}
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+.footer .links a:hover{
+    background: var(--main-color);
+    transform: scale(1.1);
+}
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color: var(--main-color);
+}
+/* E N D          F O O T E R       S E C T I O N  */
 
 /* S T A S T      M E D I A      L A  R G E  */
 
@@ -501,6 +642,7 @@ section {
     .home .content h3 {
         font-size: 4.5rem;
     }
+
     .home .content p {
         font-size: 1.5rem;
     }
