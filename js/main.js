@@ -72,10 +72,10 @@ imgIndex = (imgIndex + 1) % images.length
 
 // S T A R T     M E N U      A  P I      L O G I C -----
 async function getMenu() {
-    let menu = await fetch("https://api.sampleapis.com/coffee/hot")
+    let menu = await fetch("https://abmans0ur.github.io/coffee/coffee.json")
     .then((el)=>el.json())
     .then((d)=>{return d})
-    .catch((er)=>{})
+    .catch((er)=>{console.log(er);})
     let cartona=``;
     menu.map((idx)=>{
         cartona+=`
@@ -87,10 +87,8 @@ async function getMenu() {
         <a href="#" class="btn">add to cart</a>
     </div>
         `
-    })
-    
-    document.querySelector(".menu .box-container").innerHTML=cartona;
-   
+        document.querySelector(".box-container").innerHTML=cartona;
+}) 
 }
 getMenu()
 
