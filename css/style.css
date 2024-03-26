@@ -475,15 +475,17 @@ section {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
+    text-align: center;
     font-size: 2rem;
     border: var(--border);
     color: #fff;
-    margin: 0.3rem;
+    margin:1rem .3rem 0.3rem;
     
     
 }
 .products .box-container .box .icons a:hover{
     background-color: var(--main-color);
+    transform: translateY(-.5rem);
 
 }
 .products .box-container .box .image{
