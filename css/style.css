@@ -499,6 +499,7 @@ section {
 }
 .products .product-list .list .icons-a a:hover{
     background-color: var(--main-color);
+    transform: translateY(-.5rem);
 
 }
 .products .product-list .list .pic{
@@ -514,7 +515,7 @@ section {
     font-size: 2.5rem;
 }
 .products .product-list .list .contant .stars-i{
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
 }
 .products .product-list .list .contant .stars-i i{
     font-size: 1.7rem;
