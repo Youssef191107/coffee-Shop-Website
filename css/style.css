@@ -499,7 +499,6 @@ section {
 }
 .products .product-list .list .icons-a a:hover{
     background-color: var(--main-color);
-    transform: translateY(-.5rem);
 
 }
 .products .product-list .list .pic{
