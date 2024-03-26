@@ -481,7 +481,6 @@ section {
     align-items: center;
     border: var(--border);
     padding: 2rem;
-    flex: 1 1 45rem;
 }
 .products .product-list .list .icons-a a{
     height: 5rem;
@@ -505,8 +504,9 @@ section {
 
 }
 .products .product-list .list .pic img{
-    width: 30rem;
+    /* width: 30rem; */
     height: 25rem;
+
 }
 .products .product-list .list .contant h3{
     color: #fff;
@@ -799,6 +799,16 @@ section {
     .home .content p {
         font-size: 1.5rem;
     }
+    .products .product-list .list .pic{
+        padding: 2.5rem 0;
+    
+    }
+    .products .product-list .list .pic img{
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+    
+    }
 }
 
 /* M E D I A      S M A L L     S C R E E N ------------ */
@@ -806,6 +816,16 @@ section {
 @media (max-width:450px) {
     html {
         font-size: 55%;
+    }
+    .products .product-list .list .pic{
+        padding: 2.5rem 0;
+    
+    }
+    .products .product-list .list .pic img{
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+    
     }
 
 }
