@@ -215,7 +215,7 @@ section {
     &:hover {
         margin-left: 3rem;
         opacity: 0.8;
-        box-shadow: 0rem .5rem .5rem .5rem #d3ad7fa1;
+        box-shadow: 0rem .5rem .5rem .5rem #d3ad7f77;
     }
 }
 
@@ -434,8 +434,8 @@ section {
     color: #aaa;
     font-size: 1.5rem;
     padding: 1rem 0;
-    height: 15rem;
-    line-height: 1.6;
+    height: 16rem;
+    line-height: 1.4;
 }
 
 .menu .box-container .box .price {
@@ -506,7 +506,6 @@ section {
 
 }
 .products .product-list .list .pic img{
-    /* width: 30rem; */
     height: 25rem;
 
 }
