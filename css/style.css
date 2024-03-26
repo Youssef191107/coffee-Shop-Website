@@ -746,6 +746,16 @@ section {
     section {
         padding: 2rem;
     }
+    .products .product-list .list .pic{
+        padding: 2.5rem 0;
+    
+    }
+    .products .product-list .list .pic img{
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+    
+    }
 
 }
 
