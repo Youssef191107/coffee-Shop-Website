@@ -434,6 +434,8 @@ section {
     color: #aaa;
     font-size: 1.5rem;
     padding: 1rem 0;
+    height: 15rem;
+    line-height: 1.6;
 }
 
 .menu .box-container .box .price {
@@ -543,8 +545,9 @@ section {
     text-align: center;
     padding: .3rem 2rem;
 }
-.review .box-container .box #quote{
- font-size: 3rem;
+.review .box-container .box i{
+ font-size: 5rem;
+ padding: 1.5rem 0;
     color: var(--main-color);
 }
 .review .box-container .box p{
