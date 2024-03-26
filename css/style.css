@@ -436,6 +436,7 @@ section {
     padding: 1rem 0;
     height: 16rem;
     line-height: 1.4;
+    margin: auto 0;
 }
 
 .menu .box-container .box .price {
