@@ -461,17 +461,17 @@ section {
 /* E N D     M E N U     S E C T I O N  */
 
 /* S T A R T    P R O D U C T     S E C T I O N    */
-.products .box-container{
+.products .product-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
-.products .box-container .box{
+.products .product-list .list{
     align-items: center;
     border: var(--border);
     padding: 2rem;
 }
-.products .box-container .box .icons a{
+.products .product-list .list .icons-a a{
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -482,33 +482,33 @@ section {
     
     
 }
-.products .box-container .box .icons a:hover{
+.products .product-list .list .icons-a a:hover{
     background-color: var(--main-color);
 
 }
-.products .box-container .box .image{
+.products .product-list .list .pic{
     padding: 2.5rem 0;
 
 }
-.products .box-container .box .image img{
+.products .product-list .list .pic img{
     height: 25rem;
 }
-.products .box-container .box .content h3{
+.products .product-list .list .contant h3{
     color: #fff;
     font-size: 2.5rem;
 }
-.products .box-container .box .content .stars{
+.products .product-list .list .contant .stars{
     padding: 1.5rem;
 }
-.products .box-container .box .content .stars i{
+.products .product-list .list .contant .stars i{
     font-size: 1.7rem;
     color: var(--main-color);
 }
-.products .box-container .box .content .price{
+.products .product-list .list .contant .price{
     color: #fff;
     font-size: 2.5rem;
 }
-.products .box-container .box .content .price span{
+.products .product-list .list .contant .price span{
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: lighter;

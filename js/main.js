@@ -71,7 +71,8 @@ imgIndex = (imgIndex + 1) % images.length
 // E N D      S E T I N T E V A L      F U N C T I O N   ------------
 
 // S T A R T    A  P I      L O G I C -----
-// JOOOOOOOOOOOOOOOOO
+
+
 // E  B  D      A  P I      L O G I C -----
 
 
