@@ -70,10 +70,32 @@ imgIndex = (imgIndex + 1) % images.length
 },3000)
 // E N D      S E T I N T E V A L      F U N C T I O N   ------------
 
-// S T A R T    A  P I      L O G I C -----
+// S T A R T     M E N U      A  P I      L O G I C -----
+async function getMenu() {
+    let menu = await fetch("https://api.sampleapis.com/coffee/hot")
+    .then((el)=>el.json())
+    .then((d)=>{return d})
+    .catch((er)=>{})
+    let cartona=``;
+    menu.map((idx)=>{
+        cartona+=`
+        <div class="box">
+        <img src="${idx.image}">
+        <h3>${idx.title}</h3>
+        <p>${idx.description}</p>
+        <div class="price">$15.99 <span>20.99</span> </div>
+        <a href="#" class="btn">add to cart</a>
+    </div>
+        `
+    })
+    
+    document.querySelector(".menu .box-container").innerHTML=cartona;
+   
+}
+getMenu()
 
 
-// E  B  D      A  P I      L O G I C -----
+// E  B  D       M E N U      A  P I      L O G I C -----
 
 
 
