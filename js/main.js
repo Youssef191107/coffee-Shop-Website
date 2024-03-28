@@ -87,6 +87,7 @@ async function getMenu() {
     .then((el)=>el.json())
     .then((d)=>{return d})
     .catch((er)=>{console.log(er);})
+    menu.splice(18 ,20)
     let cartona=``;
     menu.map((idx)=>{
         cartona+=`
