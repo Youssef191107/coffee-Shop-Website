@@ -299,7 +299,16 @@ section {
     display: flex;
     align-items: center;
     position: relative;
+    &:hover {
+        img{
 
+            opacity: 1;
+        }
+
+        .content h3{
+            color: #fff;
+        }
+    }
 
 }
 
@@ -309,9 +318,7 @@ section {
     opacity: 0.4;
     object-fit: cover;
 
-    &:hover {
-        opacity: 1;
-    }
+    
 }
 
 .home .content {
@@ -328,6 +335,8 @@ section {
     font-size: 6rem;
     text-transform: uppercase;
     color: #fff;
+    -webkit-text-stroke: .1rem #fff;
+    color: transparent;
 }
 
 .home .content p {
