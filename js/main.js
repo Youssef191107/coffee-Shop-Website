@@ -4,6 +4,8 @@ let cartItem = document.querySelector(".cart-item-container");
 let cartBtn = document.querySelector("#cart-btn");
 let searchForm = document.querySelector(".search-form");
 let searchBtn = document.querySelector("#search");
+let header= document.querySelector(".header");
+// S C R O L L      N A V B A R      F U N C T I O N -------
 
 //  F U N C T I O N      C A R T    S H O  P P I N G--------
 cartBtn.addEventListener("click", ()=>{
@@ -26,11 +28,20 @@ searchBtn.addEventListener("click" , ()=>{
 })
 
 // F U N C T I O N    S C R O L L    W I N D O W   ------
+let prevScroll=window.scrollY;
 
 window.onscroll=()=>{
     nav.classList.remove("active")
     searchForm.classList.remove("add")
     cartItem.classList.remove("show")
+    let currentScroll=window.scrollY;
+    if (prevScroll > currentScroll) {
+        header.style.top="0"
+    }else{
+        header.style.top="-90px"
+
+    }
+    prevScroll=currentScroll
 }
 let scrollUp=document.querySelector(".scroll")
 window.addEventListener("scroll" , ()=>{
@@ -133,7 +144,7 @@ function showData() {
         </tr>
         ` 
     }
-    if (iName.value!="" || iEmail.value!="" || iNum.value!="") {
+    if (iName.value!="" && iEmail.value!="" && iNum.value!="") {
         window.localStorage.setItem("data" , JSON.stringify(dataList))
     }else{
         window.alert("please copmplete your inputs" )

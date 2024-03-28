@@ -395,6 +395,7 @@ section {
 /* E N D     A B O U T     S E C T I O N  */
 
 /* S T A R T     M E N U     S E C T I O N  */
+
 .menu .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -515,7 +516,7 @@ section {
     font-size: 2.5rem;
 }
 .products .product-list .list .contant .stars-i{
-    /* padding: 1.5rem; */
+    padding: 1.5rem;
 }
 .products .product-list .list .contant .stars-i i{
     font-size: 1.7rem;
