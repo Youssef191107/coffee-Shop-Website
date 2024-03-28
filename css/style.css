@@ -340,6 +340,7 @@ section {
 }
 
 .home .content p {
+    max-width: 54.2rem;
     font-size: 2rem;
     font-weight: lighter;
     line-height: 1.8;
