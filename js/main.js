@@ -34,21 +34,21 @@ window.onscroll=()=>{
     nav.classList.remove("active")
     searchForm.classList.remove("add")
     cartItem.classList.remove("show")
-    let currentScroll=window.scrollY;
-    if (prevScroll > currentScroll) {
-        header.style.top="0"
-    }else{
-        header.style.top="-90px"
+    // let currentScroll=window.scrollY;
+    // if (prevScroll > currentScroll) {
+    //     header.style.top="0"
+    // }else{
+    //     header.style.top="-90px"
 
-    }
-    prevScroll=currentScroll
+    // }
+    // prevScroll=currentScroll
 }
 let scrollUp=document.querySelector(".scroll")
 window.addEventListener("scroll" , ()=>{
     if (window.scrollY>600) {
-       scrollUp.style.display="flex"
+        scrollUp.classList.add("showscroll")
     }else{
-        scrollUp.style.display="none"
+        scrollUp.classList.remove("showscroll")
     }
 })
 scrollUp.addEventListener("click" , ()=>{
@@ -73,7 +73,7 @@ window.addEventListener("resize", function (e) {
 // E N D          F U N C T I O N              R E S I Z E -------------
 // S E T I N T E R V A L              F U N C T I O N ------------
 let img=document.querySelector(".home img");
-let images=["image/bg.avif","image/bg10.jpg","image/bg3 (2).jpg","image/bg4.jpg"];
+let images=["image/home-img.jpeg","image/bg10.jpg","image/bg.avif","image/bg4.jpg"];
 let imgIndex=0;
 let set=setInterval(()=>{
 img.src=images[imgIndex]
@@ -87,7 +87,7 @@ async function getMenu() {
     .then((el)=>el.json())
     .then((d)=>{return d})
     .catch((er)=>{console.log(er);})
-    menu.splice(18 ,20)
+    menu.splice(9 ,20)
     let cartona=``;
     menu.map((idx)=>{
         cartona+=`

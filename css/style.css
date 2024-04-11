@@ -79,18 +79,13 @@ section {
     height: 6rem;
     border-radius: 50%;
     overflow: hidden;
-
-    &:hover img {
-        opacity: 1;
-    }
-
 }
 
 .header .logo img {
     width: 6rem;
     height: 6rem;
     cursor: pointer;
-    opacity: 0.8;
+    object-fit: cover;
 
 }
 
@@ -262,19 +257,23 @@ section {
     background-color: var(--main-color);
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: -50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     cursor: pointer;
-    display: none;
+    transition: .6s;
     animation: toup 3s infinite;
 
     i {
         font-size: 18px;
         color: var(--black);
     }
+}
+
+.showscroll {
+    right: 30px !important;
 }
 
 @keyframes toup {
@@ -299,13 +298,14 @@ section {
     display: flex;
     align-items: center;
     position: relative;
+
     &:hover {
-        img{
+        img {
 
             opacity: 1;
         }
 
-        .content h3{
+        .content h3 {
             color: #fff;
         }
     }
@@ -318,7 +318,7 @@ section {
     opacity: 0.4;
     object-fit: cover;
 
-    
+
 }
 
 .home .content {
@@ -378,11 +378,6 @@ section {
 .about .row .image img {
     width: 100%;
     height: 100%;
-    opacity: 0.5;
-
-    &:hover {
-        opacity: 1;
-    }
 }
 
 .about .row .contant {
@@ -441,6 +436,7 @@ section {
     font-size: 3rem;
     padding: 1rem 0;
 }
+
 .menu .box-container .box p {
     color: #aaa;
     font-size: 1.5rem;
@@ -478,7 +474,8 @@ section {
     &.box .price span {
         color: var(--black);
     }
-    &.box img{
+
+    &.box img {
         opacity: 1;
     }
 }
@@ -486,17 +483,41 @@ section {
 /* E N D     M E N U     S E C T I O N  */
 
 /* S T A R T    P R O D U C T     S E C T I O N    */
-.products .product-list{
+.products .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
-.products .product-list .list{
+
+.products .product-list .list {
     align-items: center;
     border: var(--border);
     padding: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    &:hover{
+        .contant .stars-i i{
+            color: #010103;
+        }
+        .hover{
+            clip-path: circle(150% at left 100% );
+            
+        }
+    }
 }
-.products .product-list .list .icons-a a{
+.products .product-list .list .hover{
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: circle(0% at left 100% );
+    z-index: -1;
+}
+
+.products .product-list .list .icons-a a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -504,39 +525,47 @@ section {
     font-size: 2rem;
     border: var(--border);
     color: #fff;
-    margin:1rem .3rem 0.3rem;
-    
-    
+    margin: 1rem .3rem 0.3rem;
+
+
 }
-.products .product-list .list .icons-a a:hover{
+
+.products .product-list .list .icons-a a:hover {
     background-color: var(--main-color);
     transform: translateY(-.5rem);
 
 }
-.products .product-list .list .pic{
+
+.products .product-list .list .pic {
     padding: 2.5rem 0;
 
 }
-.products .product-list .list .pic img{
+
+.products .product-list .list .pic img {
     height: 25rem;
 
 }
-.products .product-list .list .contant h3{
+
+.products .product-list .list .contant h3 {
     color: #fff;
     font-size: 2.5rem;
 }
-.products .product-list .list .contant .stars-i{
+
+.products .product-list .list .contant .stars-i {
     padding: 1.5rem;
 }
-.products .product-list .list .contant .stars-i i{
+
+.products .product-list .list .contant .stars-i i {
     font-size: 1.7rem;
     color: var(--main-color);
 }
-.products .product-list .list .contant .price{
+
+.products .product-list .list .contant .price {
     color: #fff;
     font-size: 2.5rem;
 }
-.products .product-list .list .contant .price span{
+
+.products .product-list .list .contant .price span {
     font-size: 1.5rem;
     text-decoration: line-through;
     font-weight: lighter;
@@ -546,40 +575,73 @@ section {
 /* E N D    P R O D U C T     S E C T I O N    */
 
 
-.review .box-container{
+.review .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap: 1.5rem;
 }
-.review .box-container .box{
+
+.review .box-container .box {
     border: var(--border);
     text-align: center;
     padding: .3rem 2rem;
+    position: relative;
+    z-index: 1;
+    &:hover span{
+      
+    }
+   
 }
-.review .box-container .box i{
- font-size: 5rem;
- padding: 1.5rem 0;
+.review .box-container .box span{
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: circle(0% at center 50% );
+    z-index: -1;
+}
+.review .box-container .box:hover
+{
+    i,p,img,h3,.stars i{
+        color: #010103;
+        opacity: 1;
+    }
+    span{
+        clip-path: circle(100% at center 50% );
+        
+    }
+} 
+
+.review .box-container .box i {
+    font-size: 5rem;
+    padding: 1.5rem 0;
     color: var(--main-color);
 }
-.review .box-container .box p{
+
+.review .box-container .box p {
     font-size: 1.5rem;
     line-height: 1.8;
     color: #ccc;
     padding: 2rem 0;
 }
-.review .box-container .box .user{
+
+.review .box-container .box .user {
     width: 7rem;
     height: 7rem;
     opacity: 0.5;
     border-radius: 50%;
     object-fit: cover;
 }
-.review .box-container .box h3{
+
+.review .box-container .box h3 {
     padding: 1rem 0;
     font-size: 2rem;
     color: #fff;
 }
-.review .box-container .box .stars i{
+
+.review .box-container .box .stars i {
     font-size: 1.5rem;
     color: var(--main-color);
 
@@ -592,42 +654,48 @@ section {
 
 
 /* S T A R T      C O N T A C T      S E C T  I O N */
-.contact .row{
+.contact .row {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 
 }
-.contact .row .map{
+
+.contact .row .map {
     flex: 1 1 45rem;
     width: 100%;
-    object-fit:cover ;
+    object-fit: cover;
 }
-.contact .row form{
+
+.contact .row form {
     flex: 1 1 45rem;
     padding: 5rem 2rem;
     text-align: center;
 
 }
-.contact .row form h3{
+
+.contact .row form h3 {
     text-transform: uppercase;
-    font-size:3.5rem;
+    font-size: 3.5rem;
     color: #fff;
 }
-.contact .row form .inputBox{
+
+.contact .row form .inputBox {
     display: flex;
     align-items: center;
-    margin: 2rem 0 ;
+    margin: 2rem 0;
     background: var(--border);
     border: var(--border);
     border-radius: 1rem;
 }
-.contact .row form .inputBox span{
+
+.contact .row form .inputBox span {
     color: #fff;
     font-size: 2rem;
     padding-left: 2rem;
 }
-.contact .row form .inputBox input{
+
+.contact .row form .inputBox input {
     width: 100%;
     padding: 2rem;
     font-size: 1.7rem;
@@ -635,6 +703,7 @@ section {
     text-transform: none;
     background: transparent;
 }
+
 /* E N D          C O N T A C T      S E C T  I O N */
 
 
@@ -679,45 +748,53 @@ section {
     line-height: 1.5;
     color: #fff;
 }
-.blogs .box-container .box .content .title:hover{
+
+.blogs .box-container .box .content .title:hover {
     color: var(--main-color);
 }
-.blogs .box-container .box .content span{
+
+.blogs .box-container .box .content span {
     color: var(--main-color);
     display: block;
     padding-top: 1rem;
     font-size: 2rem;
 }
-.blogs .box-container .box .content p{
+
+.blogs .box-container .box .content p {
     font-size: 1.6rem;
     line-height: 1.8;
     color: #ccc;
     padding: 1rem 0;
 }
+
 /* E N D          B L O G S      S E C T I O N  */
 /* S T A R T      F O O T E R       S E C T I O N  */
-.footer{
+.footer {
     background: var(--black);
     text-align: center;
 }
-.footer .shar{
-    padding:1rem 0 ;
+
+.footer .shar {
+    padding: 1rem 0;
 }
-.footer .shar a{
+
+.footer .shar a {
     width: 3.5rem;
     height: 4rem;
     line-height: 4rem;
     font-size: 1.8rem;
     color: #fff;
-    border:var(--border) ;
+    border: var(--border);
     margin: .3rem;
     border-radius: .5rem;
 }
-.footer .shar a:hover{
+
+.footer .shar a:hover {
     background-color: var(--main-color);
     transform: translateY(-.5rem);
 }
-.footer .links{
+
+.footer .links {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -725,25 +802,30 @@ section {
     gap: 1rem;
 
 }
-.footer .links a{
+
+.footer .links a {
     padding: .7rem 2rem;
     color: #fff;
     border: var(--border);
     font-size: 2rem;
 }
-.footer .links a:hover{
+
+.footer .links a:hover {
     background: var(--main-color);
     transform: scale(1.1);
 }
-.footer .credit{
+
+.footer .credit {
     font-size: 2rem;
     color: #fff;
     font-weight: lighter;
     padding: 1.5rem;
 }
-.footer .credit span{
+
+.footer .credit span {
     color: var(--main-color);
 }
+
 /* E N D          F O O T E R       S E C T I O N  */
 
 /* S T A S T      M E D I A      L A  R G E  */
@@ -760,15 +842,17 @@ section {
     section {
         padding: 2rem;
     }
-    .products .product-list .list .pic{
+
+    .products .product-list .list .pic {
         padding: 2.5rem 0;
-    
+
     }
-    .products .product-list .list .pic img{
+
+    .products .product-list .list .pic img {
         width: 100%;
         height: 25rem;
         object-fit: cover;
-    
+
     }
 
 }
@@ -823,15 +907,17 @@ section {
     .home .content p {
         font-size: 1.5rem;
     }
-    .products .product-list .list .pic{
+
+    .products .product-list .list .pic {
         padding: 2.5rem 0;
-    
+
     }
-    .products .product-list .list .pic img{
+
+    .products .product-list .list .pic img {
         width: 100%;
         height: 25rem;
         object-fit: cover;
-    
+
     }
 }
 
@@ -841,15 +927,17 @@ section {
     html {
         font-size: 55%;
     }
-    .products .product-list .list .pic{
+
+    .products .product-list .list .pic {
         padding: 2.5rem 0;
-    
+
     }
-    .products .product-list .list .pic img{
+
+    .products .product-list .list .pic img {
         width: 100%;
         height: 25rem;
         object-fit: cover;
-    
+
     }
 
 }
