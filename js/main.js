@@ -63,11 +63,12 @@ window.addEventListener("resize", function (e) {
         nav.classList.remove("active")
         searchForm.classList.remove("add")
         cartItem.classList.remove("show")
+        scrollUp.style.right="20px"
     } else {
         nav.classList.remove("active")
         searchForm.classList.remove("add")
         cartItem.classList.remove("show")
-
+        scrollUp.style.right="30px"
     }
 })
 // E N D          F U N C T I O N              R E S I Z E -------------
